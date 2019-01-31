@@ -17,5 +17,5 @@
   <label>Description</label>
   <%= f.text_area :description, class: 'form-control mb-3' %>
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit %>
+  <%= f.submit class:'btn btn-primary' %>
 <% end %>
