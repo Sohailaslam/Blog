@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h4>All Users</h4>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Bio</th>
+        <th>Admin Status</th>
+      </tr>
+    </thead>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td><%= user.bio %></td>
+        <td><%= user.admin %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

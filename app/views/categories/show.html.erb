@@ -1,0 +1,20 @@
+<div class="post-bg">
+<div class="container pt-2 pb-5">
+  <div class="post-show">
+  <h1 class="categorey-text"><%= @category.name %></h1>
+  <p><%= @category.description %></p>
+  <hr>
+  <% @category.posts.each do |post| %>
+    <a href="<%= post_path(post) %>"><h2><%= post.title %></h2></a>
+    By: <%= post.user.username %> | <%= post.created_at.strftime("%m/%d/%Y") %> at <%= post.created_at.strftime("%H:%M %p") %> | Comments: <%= post.comments.count %>
+    <% if can? :update, post %>
+      | <%= link_to 'Edit', edit_post_path(post) %>
+    <% end %>
+    <% if can? :destroy, post %>
+      | <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are You Sure?' } %>
+    <% end %>
+    <hr>
+  <% end %>
+</div>
+</div>
+</div>

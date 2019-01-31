@@ -1,0 +1,32 @@
+<div class="post-bg">
+<div class="container pt-2 pb-5">
+   <div class="col-md-10 mx-auto">
+  <div class="post-show">
+    <h1 class="categorey-text"><%= @post.category.name %></h1>
+     <h2 class="pb-3"><%= @post.title %></h2>
+  <%= image_tag(@post.image.url, class: 'img-fluid') %>
+  <div class="py-4">
+     <i class="far fa-user meta-icon-color"></i> <small class="meta-text meta-space"><%= @post.user.username %></small>
+     <i class="far fa-clock meta-icon-color"></i> <small class="meta-text meta-space"><%= @post.created_at.strftime("%m/%d/%Y") %> at <%= @post.created_at.strftime("%H:%M %p") %></small>
+     <i class="far fa-comment-alt meta-icon-color"></i> <small class="meta-text meta-space"><%= @post.comments.count %> COMMENTS</small>
+     </div>
+  <p><%= @post.description %></p>
+  <hr>
+  <h6 class="mt-4"><i class="far fa-comment-alt"></i> Comments:</h6>
+  <div id="comments">
+    <% if user_signed_in? %>
+      <%= render @comments %>
+    <% else %>
+      <small class="mark">You Need to LogIn First</small>
+    <% end %>
+  </div>
+  <% if user_signed_in? %>
+    <span id="newcommentform">
+      New Comment <%= render 'comments/form', post: @post.id %>
+    </span>
+  <% end %>
+</div>
+</div>
+<a href="#" class="btn btn-primary">Back</a>
+</div>
+</div>

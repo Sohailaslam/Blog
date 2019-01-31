@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @font-face {
+  font-family: 'Roboto Slab';
+  src: url('Roboto.ttf') format('truetype'); 
+    
+}
+body,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+button,
+input,
+li,
+ul,
+ol,
+table,
+td,
+tr,
+th,
+fieldset,
+font,
+select,
+option,
+strong,
+b,
+textarea{
+  font-family: 'Roboto Slab';
+  }
+  
+@font-face {
+  font-family: 'Yesteryear,Arial,Helvetica,sans-serif';
+  src: url('Yesteryear.ttf') format('truetype'); 
+    
+}
+.categorey-text{
+  font-family: 'Yesteryear,Arial,Helvetica,sans-serif';
+  }
+  
+  
+  
+
+.sign-in-bg {
+  padding: 20px 20px;
+  background-image: linear-gradient(to right, #ebedec, #e8ede8);
+}
+.sign-header {
+  background-image: linear-gradient(#f0f4f3, #d8dde3);
+  border-bottom:1px solid #aeb3b8;
+  padding: 7px 5px;
+}
+.white-color {
+  color: #fff;
+}
+.grey-color {
+      color: #5e6367;
+}
+.post-bg {
+    background-color: #f8f8f8;
+    background-repeat: repeat;
+    background-size: inherit;
+    background-attachment: fixed;
+    background-position: left top;
+    background-image: url("/post-bg.png");
+}
+.post-show {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 30px 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 1px rgba(24,24,24,.05);
+    -moz-box-shadow: 2px 2px 1px rgba(24,24,24,.05);
+    box-shadow: 2px 2px 1px rgba(24,24,24,.05);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    padding: 45px 30px;
+}
+.categorey-text {
+    color: #32998d;
+}
+.meta-text {
+  color: #aaa;
+}
+.meta-icon-color {
+    color: #aaa;
+}
+.meta-space {
+  margin-right: 15px;
+}
+.post-images {
+  height: 240px;
+  display: block;
+  width: 100%;
+  background-size: cover !important;
+  background-position: top center !important;
+}
